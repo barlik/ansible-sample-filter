@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - debug: msg="{{ 'hello' | myfilter('123', '456') }}"
